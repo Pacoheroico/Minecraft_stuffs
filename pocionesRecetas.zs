@@ -4,7 +4,7 @@ import crafttweaker.item.IItemStack;
 //NO MODS REQUIRED VERSION (Just "Potion Core" duh)
 //Is required the script of potion update system
 //NO requiere mods externos mas que "Potion core"
-//Se requiere el script complemeto del sistema de mejora de pociones 
+//Se requiere el script complemento del sistema de mejora de pociones 
 
 //Pociones base -- no effects potions
 val agua_rara = "minecraft:awkward";
@@ -35,8 +35,6 @@ val effects =
     invercion:          {normal: "potioncore:invert"},
 
     //Efectos con fase normal y larga -- all effects with normal and long states
-        //resistencia_hipotermia: ["toughasnails:cold_resistance_type", "toughasnails:long_cold_resistance_type"],
-        //resistencia_hipertermia: {normal: "toughasnails:heat_resistance_type", larga: "toughasnails:long_heat_resistance_type"},
     vision_nocturna:        {normal: "minecraft:night_vision",      larga: "minecraft:long_night_vision"},
     invisibilidad:          {normal: "minecraft:invisibility",      larga: "minecraft:long_invisibility"},
     resistencia_ignifuga:   {normal: "minecraft:fire_resistance",   larga: "minecraft:long_fire_resistance"},
@@ -146,7 +144,7 @@ val bases =
     wither:             agua_vulgar,                           
     reparacion:         effects["concentracion"]["normal"],
     ceguera:            effects["debilidad"]["normal"],
-    //levitacion:         ,
+    levitacion:         effects["planeo"]["normal"],
     lentitud_minera:    effects["velocidad_minera"]["normal"],
     mejora_salud:       effects["curacion"]["normal"],
     resistencia:        agua_densa,
@@ -212,6 +210,7 @@ val ingredients =
     wither: <minecraft:skull:1>,
     reparacion: <minecraft:golden_apple:0>,
     ceguera:    <minecraft:dye:0>,
+    levitacion: <minecraft:fireworks>,
     //levitacion: <aether_legacy:cloud>,
     lentitud_minera:    <minecraft:fermented_spider_eye>,
     mejora_salud:   <minecraft:potion>.withTag({Potion: effects["concentracion"]["normal"]}),
